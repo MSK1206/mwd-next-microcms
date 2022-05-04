@@ -21,6 +21,9 @@ const About = props => {
             <li className="breadcrumb-item">
               <Link href="/service"><a>Service</a></Link>
             </li>
+            <li className="breadcrumb-item">
+              <Link href="/posts"><a>Blog</a></Link>
+            </li>
             <li className="breadcrumb-item active">
               <Link href="/about"><a>About</a></Link>
             </li>

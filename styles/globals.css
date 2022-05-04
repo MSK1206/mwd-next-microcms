@@ -54,6 +54,7 @@ a {
   position: fixed;
   top: 78px;
   z-index: 100;
+  background-color: white;
 }
 .breadcrumb li{
   background-color: white;
@@ -78,6 +79,10 @@ a {
   .blandname-mobile {
     display: inherit;
   }
+  .navbar-nav li {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
   .card .btn {
     font-size: 15px;
   }
@@ -89,6 +94,10 @@ a {
   .blandname-mobile {
     display: inherit;
   }
+  .navbar-nav li {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
   .card .btn {
     font-size: 15px;
   }
@@ -99,6 +108,10 @@ a {
   }
   .blandname-mobile {
     display: inherit;
+  }
+  .navbar-nav li {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   .card .btn {
     font-size: 15px;

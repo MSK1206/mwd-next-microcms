@@ -22,6 +22,9 @@ const Service = props => {
               <Link href="/service"><a>Service</a></Link>
             </li>
             <li className="breadcrumb-item">
+              <Link href="/posts"><a>Blog</a></Link>
+            </li>
+            <li className="breadcrumb-item">
               <Link href="/about"><a>About</a></Link>
             </li>
             <li className="breadcrumb-item">

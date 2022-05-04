@@ -1,0 +1,69 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.poststyle li{
+  list-style: none;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  color: black;
+  font-size: 13px;
+}
+
+/* responsive footer credit */
+#smallcredit {
+  display: none;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* 大画面用のfooter creditを非表示 */
+  #largecredit {
+    display: none;
+  }
+  /* 小画面用のfooter creditを非表示から表示へ変更 */
+  #smallcredit {
+    display: inherit;
+  }
+  /* about page */
+  .myimage {
+    padding: 0 0;
+  }
+}

@@ -2,13 +2,13 @@ import Head from 'next/head'
 import Link from "next/link"
 import Image from 'next/image'
 import { client } from "../libs/client"
-import styles from '../styles/Some.module.css'
+import styles from '../styles/Posts.module.css'
 
 export default function Posts({ blog }) {
   return (
     <div className={styles.container}>
     <Head>
-      <title>Contact - Matsushita Web Design</title>
+      <title>Blog - Matsushita Web Design</title>
       <meta name="description" content="大阪のフリーランスWEBデザイン事務所" />
       <link rel="icon" href="/favicon.svg" />
     </Head>
@@ -22,26 +22,34 @@ export default function Posts({ blog }) {
           <li className="breadcrumb-item">
             <Link href="/service"><a>Service</a></Link>
           </li>
+          <li className="breadcrumb-item active">
+            <Link href="/posts"><a>Blog</a></Link>
+          </li>
           <li className="breadcrumb-item">
             <Link href="/about"><a>About</a></Link>
           </li>
-          <li className="breadcrumb-item active">
+          <li className="breadcrumb-item">
             <Link href="/contact"><a>Contact</a></Link>
           </li>
         </ol>
       </nav>
     </div>
 
-    <main className={styles.main}>      
-      <ul>
-        {blog.map((blog) => (
-          <li key={blog.id}>
-            <Link href={`/blog/${blog.id}`}>
-              <a>{blog.title}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
+    <main className={styles.main}>
+      <div className={styles.wrapper}>
+        <h3>投稿一覧</h3>
+      </div>
+      <div className={styles.wrapper}>
+        <ul className={styles.poststyle}>
+            {blog.map((blog) => (
+              <li key={blog.id}>
+                <Link href={`/blog/${blog.id}`}>
+                  <a>{blog.publishedAt}{blog.title}</a>
+                </Link>
+              </li>
+            ))}
+          </ul>
+      </div>
     </main>
 
     <footer className={styles.footer}>

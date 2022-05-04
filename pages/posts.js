@@ -4,6 +4,13 @@ import Image from 'next/image'
 import { client } from "../libs/client"
 import styles from '../styles/Posts.module.css'
 
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+
 export default function Posts({ blog }) {
   return (
     <div className={styles.container}>
@@ -44,7 +51,7 @@ export default function Posts({ blog }) {
             {blog.map((blog) => (
               <li key={blog.id}>
                 <Link href={`/blog/${blog.id}`}>
-                  <a>{blog.publishedAt}{blog.title}</a>
+                  <a>{dayjs.utc(blog.publishedAt).tz('Asia/Tokyo').format('YYYY'+ '年' + 'MM' + '月' + 'DD' + '日' + 'hh' + ':' + 'mm')}&nbsp;{blog.title}</a>
                 </Link>
               </li>
             ))}

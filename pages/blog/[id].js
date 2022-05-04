@@ -8,7 +8,7 @@ export default function BlogId({ blog }) {
       <p className={styles.publishedAt}>{blog.publishedAt}</p>
       <div
         dangerouslySetInnerHTML={{
-          __html: `${blog.body}`,
+          __html: `${blog.content}`,
         }}
         className={styles.post}
       />

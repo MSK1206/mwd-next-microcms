@@ -13,4 +13,94 @@ a {
 
 * {
   box-sizing: border-box;
+}     
+
+/* Google fonts */
+
+
+/* Navbar Components CSS */
+.navbar {
+  font-family: 'Limelight';
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: white;
+}
+#navbarNav {
+  justify-content: end;
+}
+
+.navbar-nav li{
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-right: 50px;
+}
+
+.fl-r {
+  float: right;
+}
+.blandname {
+  font-size: 25px;
+  padding-top: 14px;
+  padding-left: 10px;
+}
+.blandname-mobile {
+  font-family: 'Limelight';
+  float:right;
+  margin-left: 15px;
+  display: none;
+}
+
+.fl-top {
+  position: fixed;
+  top: 78px;
+  z-index: 100;
+}
+.breadcrumb li{
+  background-color: white;
+}
+.card {
+  padding: 1rem 1rem;
+  margin: 1rem 1rem;
+  z-index: 1;
+  border-style: none;
+}
+.btn:hover {
+  background-color: black;
+}
+.github-icon-size {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 415px) {
+  .blandname {
+    display: none;
+  }
+  .blandname-mobile {
+    display: inherit;
+  }
+  .card .btn {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 391px) {
+  .blandname {
+    display: none;
+  }
+  .blandname-mobile {
+    display: inherit;
+  }
+  .card .btn {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .blandname {
+    display: none;
+  }
+  .blandname-mobile {
+    display: inherit;
+  }
+  .card .btn {
+    font-size: 15px;
+  }
 }

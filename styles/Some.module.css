@@ -1,13 +1,10 @@
 .container {
   padding: 0 2rem;
-  background-image: url('/under.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .main {
   min-height: 100vh;
-  padding: 0 0 4rem 0;
+  padding: 4rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -19,14 +16,22 @@
   display: flex;
 }
 
-.animetext {
-  font-size: 130px;
-  animation: rainbow-color-text 5s infinite alternate;
+/* about css aria*/
+
+.myimage {
+  padding: 0 20px;
 }
-.animetext1 {
-  font-size: 130px;
-  animation: rainbow-color-text1 5s infinite alternate-reverse;
+.myphoto {
+  border-radius: 75px;
 }
+.myname {
+  font-family: 'Poppins';
+  font-size: 30px;
+}
+.txtwrap {
+  word-break: keep-all;
+}
+/* about css aria*/
 
 .footer {
   display: flex;
@@ -35,7 +40,6 @@
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
-  background-color: black;
 }
 
 .footer a {
@@ -43,9 +47,10 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  color: white;
+  color: black;
   font-size: 13px;
 }
+
 /* responsive footer credit */
 #smallcredit {
   display: none;
@@ -56,38 +61,10 @@
   margin-left: 0.5rem;
 }
 
-@keyframes rainbow-color-text {
-  0% {
-    color: blueviolet;
-  }
-  25% {
-    color: lightseagreen;
-  }
-  50% {
-    color: burlywood;
-  }
-  75% {
-    color: lightslategray;
-  }
-  100% {
-    color:indianred;
-  }
-}
-@keyframes rainbow-color-text1 {
-  0% {
-    color: blueviolet;
-  }
-  25% {
-    color: lightseagreen;
-  }
-  50% {
-    color: burlywood;
-  }
-  75% {
-    color: lightslategray;
-  }
-  100% {
-    color:indianred;
+@media (max-width: 600px) {
+  .wrapper {
+    width: 100%;
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 480px) {
@@ -99,8 +76,8 @@
   #smallcredit {
     display: inherit;
   }
-  .animetext,
-  .animetext1 {
-    font-size: 38px;
+  /* about page */
+  .myimage {
+    padding: 0 0;
   }
 }

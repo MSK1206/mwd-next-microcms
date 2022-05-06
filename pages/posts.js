@@ -51,7 +51,10 @@ export default function Posts({ blog }) {
             {blog.map((blog) => (
               <li key={blog.id}>
                 <Link href={`/blog/${blog.id}`}>
-                  <a>{dayjs.utc(blog.publishedAt).tz('Asia/Tokyo').format('YYYY'+ '年' + 'MM' + '月' + 'DD' + '日' + 'hh' + ':' + 'mm')}&nbsp;{blog.title}</a>
+                  <a>
+                    <img src={blog.eyecatch.url} alt={blog.title} width="380" height="200" />
+                    {dayjs.utc(blog.publishedAt).tz('Asia/Tokyo').format('YYYY'+ '年' + 'MM' + '月' + 'DD' + '日' + 'hh' + ':' + 'mm')}&nbsp;{blog.title}
+                  </a>
                 </Link>
               </li>
             ))}

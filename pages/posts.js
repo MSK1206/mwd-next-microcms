@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
 import Link from "next/link"
 import Image from 'next/image'
@@ -44,16 +45,24 @@ export default function Posts({ blog }) {
 
     <main className={styles.main}>
       <div className={styles.wrapper}>
-        <h3>投稿一覧</h3>
-      </div>
-      <div className={styles.wrapper}>
         <ul className={styles.poststyle}>
             {blog.map((blog) => (
               <li key={blog.id}>
                 <Link href={`/blog/${blog.id}`}>
                   <a>
-                    <img src={blog.eyecatch.url} alt={blog.title} width="380" height="200" />
-                    {dayjs.utc(blog.publishedAt).tz('Asia/Tokyo').format('YYYY'+ '年' + 'MM' + '月' + 'DD' + '日' + 'hh' + ':' + 'mm')}&nbsp;{blog.title}
+                    <div className="card ">
+                    <img 
+                      src={blog.eyecatch.url}
+                      width="380"
+                      height="200"
+                      className="card-img-top"
+                      alt={blog.title} 
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title">{blog.title}</h5>
+                      <p className="card-text text-muted">投稿日時：{dayjs.utc(blog.publishedAt).tz('Asia/Tokyo').format('YYYY'+ '年' + 'MM' + '月' + 'DD' + '日' + 'hh' + ':' + 'mm')}</p>
+                    </div>
+                  </div>
                   </a>
                 </Link>
               </li>

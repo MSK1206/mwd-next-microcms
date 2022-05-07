@@ -36,6 +36,7 @@ const Contact = props => {
         <>
           <Script
             src="https://sdk.form.run/js/v2/embed.js"
+            strategy="lazyOnload"
           />
           <div
             className="formrun-embed container-fluid"

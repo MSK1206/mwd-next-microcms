@@ -33,18 +33,17 @@ const Contact = props => {
     </div>
 
     <main className={styles.main}>
-      <div className={styles.formrun}>
         <>
-          <Script 
-            src="https://sdk.form.run/js/v2/embed.js" strategy="lazyOnload"
+          <Script
+            src="https://sdk.form.run/js/v2/embed.js"
           />
           <div
-            className="formrun-embed"
+            className="formrun-embed container-fluid"
             data-formrun-form="@mmfx--1629756410"
-            data-formrun-redirect="true">
+            data-formrun-redirect="true"
+          >
           </div>
         </>
-      </div>
     </main>
 
     <footer className={styles.footer}>

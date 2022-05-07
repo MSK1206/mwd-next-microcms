@@ -36,7 +36,7 @@ const Contact = props => {
       <div className={styles.formrun}>
         <>
           <Script 
-            src="https://sdk.form.run/js/v2/embed.js" strategy="afterInteractive"
+            src="https://sdk.form.run/js/v2/embed.js" strategy="lazyOnload"
           />
           <div
             className="formrun-embed"

@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import Script from 'next/script'
 import styles from '../styles/Some.module.css'
 
 const Contact = props => {
@@ -32,7 +33,16 @@ const Contact = props => {
     </div>
 
     <main className={styles.main}>
-      <h1>Welcom Contact Page</h1>
+      <>
+        <Script 
+          src="https://sdk.form.run/js/v2/embed.js" 
+        />
+        <div
+          className="formrun-embed"
+          data-formrun-form="@mmfx--1629756410"
+          data-formrun-redirect="true">
+        </div>
+      </>
     </main>
 
     <footer className={styles.footer}>

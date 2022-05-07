@@ -28,7 +28,7 @@ export default function Home() {
               <Link href="/about"><a>About</a></Link>
             </li>
             <li className="breadcrumb-item">
-              <Link href="/contact"><a>Contact</a></Link>
+              <Link href="/contact"><a target="_self">Contact</a></Link>
             </li>
           </ol>
         </nav>

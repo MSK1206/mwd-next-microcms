@@ -3,10 +3,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Script from 'next/script'
 import styles from '../styles/Some.module.css'
-import { useState } from 'react'
 
 export default function Contact() {
-  const [ formrun, setFormrun ] = useState(null)
   return (
     <div className={styles.container}>
     <Head>
@@ -25,6 +23,9 @@ export default function Contact() {
             <Link href="/service"><a>Service</a></Link>
           </li>
           <li className="breadcrumb-item">
+              <Link href="/posts"><a>Blog</a></Link>
+          </li>
+          <li className="breadcrumb-item">
             <Link href="/about"><a>About</a></Link>
           </li>
           <li className="breadcrumb-item active">
@@ -39,9 +40,7 @@ export default function Contact() {
           <Script
             id="formrun-js"
             src="https://sdk.form.run/js/v2/embed.js"
-            onLoad={() => {
-              setFormrun({ formrun: window.Formrun('Formrun Loading it !')})
-            }}
+            strategy="lazyOnload"
           />
           <div
             className="formrun-embed container-fluid"

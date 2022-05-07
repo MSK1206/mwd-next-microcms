@@ -33,17 +33,19 @@ const Contact = props => {
     </div>
 
     <main className={styles.main}>
-      <div className={styles.wrapper.formrun}>
-        <>
-          <Script 
-            src="https://sdk.form.run/js/v2/embed.js" strategy="lazyOnload"
-          />
-          <div
-            className="formrun-embed"
-            data-formrun-form="@mmfx--1629756410"
-            data-formrun-redirect="true">
-          </div>
-        </>
+      <div className={styles.wrapper}>
+        <div className={styles.formrun}>
+          <>
+            <Script 
+              src="https://sdk.form.run/js/v2/embed.js" strategy="lazyOnload"
+            />
+            <div
+              className="formrun-embed"
+              data-formrun-form="@mmfx--1629756410"
+              data-formrun-redirect="true">
+            </div>
+          </>
+        </div>
       </div>
     </main>
 

@@ -16,6 +16,10 @@
   display: flex;
 }
 
+.formrun {
+  min-width: 980px; 
+}
+
 /* about css aria*/
 
 .myimage {

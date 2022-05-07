@@ -5,6 +5,10 @@ import Script from 'next/script'
 import styles from '../styles/Some.module.css'
 
 export default function Contact() {
+  <Script src='https://sdk.form.run/js/v2/embed.js' type="text/javascript" />
+  window.onload = function onload() {
+    target = document.getElementsByClassName("formrun-embed");
+  }
   return (
     <div className={styles.container}>
     <Head>
@@ -38,7 +42,7 @@ export default function Contact() {
     <main className={styles.main}>
         <>
           <Script
-            id="formrun-js"
+            type="text/javascript"
             src="https://sdk.form.run/js/v2/embed.js"
             strategy="lazyOnload"
           />

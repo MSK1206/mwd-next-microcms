@@ -37,6 +37,7 @@ export default function Contact() {
     <main className={styles.main}>
         <>
           <Script
+            id="formrun-js"
             src="https://sdk.form.run/js/v2/embed.js"
             onLoad={() => {
               setFormrun({ formrun: window.Formrun('Formrun Loading it !')})

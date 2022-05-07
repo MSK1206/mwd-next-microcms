@@ -3,8 +3,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Script from 'next/script'
 import styles from '../styles/Some.module.css'
+import { useState } from 'react'
 
-const Contact = props => {
+export default function Contact() {
+  const [ formrun, setFormrun ] = useState(null)
   return (
     <div className={styles.container}>
     <Head>
@@ -36,7 +38,9 @@ const Contact = props => {
         <>
           <Script
             src="https://sdk.form.run/js/v2/embed.js"
-            strategy="lazyOnload"
+            onLoad={() => {
+              setFormrun({ formrun: window.Formrun('Formrun Loading it !')})
+            }}
           />
           <div
             className="formrun-embed container-fluid"
@@ -74,5 +78,3 @@ const Contact = props => {
     </div>
   )
 }
-
-export default Contact

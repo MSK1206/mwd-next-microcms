@@ -16,10 +16,6 @@
   display: flex;
 }
 
-.formrun-embed {
-  min-width: 600px;
-}
-
 /* about css aria*/
 
 .myimage {
@@ -83,8 +79,5 @@
   /* about page */
   .myimage {
     padding: 0 0;
-  }
-  .formrun-embed {
-    min-width: 100%;
   }
 }

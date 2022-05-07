@@ -49,8 +49,7 @@ export default function Posts({ blog }) {
             {blog.map((blog) => (
               <li key={blog.id}>
                 <Link href={`/blog/${blog.id}`}>
-                  <a>
-                    <div className="card ">
+                  <a className={styles.postscard}>
                     <img 
                       src={blog.eyecatch.url}
                       width="380"
@@ -58,11 +57,8 @@ export default function Posts({ blog }) {
                       className="card-img-top"
                       alt={blog.title} 
                     />
-                    <div className="card-body">
-                      <h5 className="card-title">{blog.title}</h5>
-                      <p className="card-text text-muted">投稿日時：{dayjs.utc(blog.publishedAt).tz('Asia/Tokyo').format('YYYY'+ '年' + 'MM' + '月' + 'DD' + '日' + 'hh' + ':' + 'mm')}</p>
-                    </div>
-                  </div>
+                    <h5 className={styles.blogtitle}>{blog.title}</h5>
+                    <p className="text-muted mt-1">投稿日：{dayjs.utc(blog.publishedAt).tz('Asia/Tokyo').format('YYYY'+ '年' + 'MM' + '月' + 'DD' + '日' + 'hh' + ':' + 'mm')}</p>
                   </a>
                 </Link>
               </li>

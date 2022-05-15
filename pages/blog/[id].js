@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { client } from "../../libs/client"
 import styles from '../../styles/Custom.module.scss'
 
@@ -9,16 +10,25 @@ dayjs.extend(timezone);
 
 export default function BlogId({ blog }) {
   return (
-    <main className={styles.main}>
-      <h1 className={styles.title}>{blog.title}</h1>
-      <p className={styles.publishedAt}>投稿日：{dayjs.utc(blog.publishedAt).tz('Asia/Tokyo').format('YYYY'+ '年' + 'MM' + '月' + 'DD' + '日' + 'hh' + ':' + 'mm')}</p>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${blog.content}`,
-        }}
-        className={styles.post}
-      />
-    </main>
+    <div className={styles.container}>
+      <Head>
+      <title>{blog.title} - Matsushita Web Design</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta name="description" content="大阪のフリーランスWEBデザイン事務所" />
+      <link rel="icon" href="/favicon.svg" />
+      </Head>
+
+      <main className={styles.main}>
+        <h1 className={styles.title}>{blog.title}</h1>
+        <p className={styles.publishedAt}>投稿日：{dayjs.utc(blog.publishedAt).tz('Asia/Tokyo').format('YYYY'+ '年' + 'MM' + '月' + 'DD' + '日' + 'hh' + ':' + 'mm')}</p>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `${blog.content}`,
+          }}
+          className={styles.post}
+        />
+      </main>
+    </div>
   )
 }
 

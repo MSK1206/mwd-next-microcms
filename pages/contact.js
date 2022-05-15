@@ -10,6 +10,7 @@ export default function Contact() {
     <Head>
       <title>Contact - Matsushita Web Design</title>
       <meta name="description" content="大阪のフリーランスWEBデザイン事務所" />
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="icon" href="/favicon.svg" />
     </Head>
 

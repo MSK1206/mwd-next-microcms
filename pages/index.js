@@ -6,11 +6,12 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Head>
+    <Head>
       <title>Home - Matsushita Web Design</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="description" content="大阪のフリーランスWEBデザイン事務所" />
       <link rel="icon" href="/favicon.svg" />
-      </Head>
+    </Head>
 
       <div className="container-fluid fl-top">
         <nav aria-label="breadcrumb">

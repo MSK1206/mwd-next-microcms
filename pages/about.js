@@ -8,6 +8,7 @@ const About = props => {
     <div className={styles.container}>
     <Head>
       <title>About - Matsushita Web Design</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="description" content="大阪のフリーランスWEBデザイン事務所" />
       <link rel="icon" href="/favicon.svg" />
     </Head>

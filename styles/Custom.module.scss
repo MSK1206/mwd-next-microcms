@@ -33,7 +33,8 @@
 
   & > p {
     line-height: 1.8;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.5px;
+    word-break:break-all;
   }
 
   & > ol {
@@ -116,7 +117,9 @@ $mq-breakpoints: (
       }
 
       & > p {
-        word-break:keep-all;
+        line-height: 1.8;
+        letter-spacing: 0.5px;
+        word-break:break-all;
       }
     }
   }

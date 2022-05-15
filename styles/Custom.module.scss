@@ -1,5 +1,8 @@
+.container {
+  padding: 1rem 0;
+}
 .main {
-  width: 1080px;
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -22,7 +25,7 @@
   }
 
   & > h2 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     margin: 40px 0 16px;
     border-bottom: 1px solid #ddd;
@@ -64,11 +67,11 @@ $mq-breakpoints: (
 
   @include mq(xs) {
     .main {
-      width: 650px;
+      width: 90%;
     }
     .post {
       & > h1 {
-        font-size: 30px;
+        font-size: 23px;
         font-weight: bold;
         margin: 40px 0 20px;
         background-color: #eee;
@@ -77,7 +80,7 @@ $mq-breakpoints: (
       }
     
       & > h2 {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: bold;
         margin: 40px 0 16px;
         border-bottom: 1px solid #ddd;
@@ -90,14 +93,14 @@ $mq-breakpoints: (
   }
   @include mq(iPhone12pro) {
     .main {
-      width: 650px;
+      width: 90%;
     }
     .title {
-      font-size: 30px;
+      font-size: 25px;
     }
     .post {
       & > h1 {
-        font-size: 30px;
+        font-size: 23px;
         font-weight: bold;
         margin: 40px 0 20px;
         background-color: #eee;
@@ -106,7 +109,7 @@ $mq-breakpoints: (
       }
     
       & > h2 {
-        font-size: 24px;
+        font-size: 20px;
         font-weight: bold;
         margin: 40px 0 16px;
         border-bottom: 1px solid #ddd;

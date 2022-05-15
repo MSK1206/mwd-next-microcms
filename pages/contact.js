@@ -3,8 +3,14 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Script from 'next/script'
 import styles from '../styles/Some.module.css'
+import { useEffect } from 'react'
 
- const Contact = props => {
+export default function Contact() {
+  useEffect(() => {
+    window.onload = function onload(){
+      target = document.getElementById("formrun-js");
+    }
+  }, []);
   return (
     <div className={styles.container}>
     <Head>
@@ -43,6 +49,7 @@ import styles from '../styles/Some.module.css'
           strategy="lazyOnload"
         />
         <div
+          id="formrun-js"
           className="formrun-embed container-fluid"
           data-formrun-form="@mmfx--1629756410"
           data-formrun-redirect="true"
@@ -74,5 +81,3 @@ import styles from '../styles/Some.module.css'
     </div>
   )
 }
-
-export default Contact

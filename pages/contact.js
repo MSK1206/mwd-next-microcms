@@ -3,14 +3,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Script from 'next/script'
 import styles from '../styles/Some.module.css'
-import { useEffect } from 'react'
 
 export default function Contact() {
-  useEffect(() => {
-    window.onload = function onload(){
-      target = document.getElementById("formrun-js");
-    }
-  }, []);
   return (
     <div className={styles.container}>
     <Head>

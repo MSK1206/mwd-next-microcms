@@ -70,9 +70,7 @@ export default function Posts({ blog }) {
 
     <footer className={styles.footer}>
       <a
-        href="/"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="#pagetop"
         id={styles.largecredit}
       >
         Copyright © 2022 Matsushita Web Design All Rights Reserved{' '}
@@ -81,9 +79,7 @@ export default function Posts({ blog }) {
         </span>
       </a>
       <a
-        href="/"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="#pagetop"
         id={styles.smallcredit}
       >
         Copyright © 2022 M.W.D All Rights Reserved{' '}

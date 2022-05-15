@@ -90,14 +90,14 @@ $mq-breakpoints: (
   }
   @include mq(iPhone12pro) {
     .main {
-      width: 380px;
+      width: 650px;
     }
     .title {
-      font-size: 20px;
+      font-size: 30px;
     }
     .post {
       & > h1 {
-        font-size: 15px;
+        font-size: 30px;
         font-weight: bold;
         margin: 40px 0 20px;
         background-color: #eee;
@@ -106,7 +106,7 @@ $mq-breakpoints: (
       }
     
       & > h2 {
-        font-size: 13px;
+        font-size: 24px;
         font-weight: bold;
         margin: 40px 0 16px;
         border-bottom: 1px solid #ddd;

@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Script from 'next/script'
 import styles from '../styles/Some.module.css'
 
-export default function Contact() {
+ const Contact = props => {
   return (
     <div className={styles.container}>
     <Head>
@@ -74,3 +74,5 @@ export default function Contact() {
     </div>
   )
 }
+
+export default Contact

@@ -13,7 +13,7 @@ export default function BlogId({ blog }) {
     <div className={styles.container}>
       <Head>
       <title>{blog.title} - Matsushita Web Design</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width, viewport-fit=cover" />
+      <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
       <meta name="description" content="大阪のフリーランスWEBデザイン事務所" />
       <link rel="icon" href="/favicon.svg" />
       </Head>

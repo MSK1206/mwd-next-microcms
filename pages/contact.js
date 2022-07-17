@@ -1,10 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState } from 'react'
 import Script from 'next/script'
 import styles from '../styles/Some.module.css'
 
 export default function Contact() {
+  const [formrun, setFormrun] = useState(null)
   return (
     <div className={styles.container}>
     <Head>
@@ -39,8 +41,12 @@ export default function Contact() {
     <main className={styles.main}>
       <>
         <Script
+          id="formrun-js"
           src="https://sdk.form.run/js/v2/embed.js"
           strategy="lazyOnload"
+          onLoad={() => {
+            setFormrun({ formrun: window.Formrun('Formrun loding Success')})
+          }}
         />
         <div
           className="formrun-embed container-fluid"

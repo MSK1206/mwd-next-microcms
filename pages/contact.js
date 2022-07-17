@@ -41,9 +41,6 @@ export default function Contact() {
         <Script
           src="https://sdk.form.run/js/v2/embed.js"
           strategy="lazyOnload"
-          onError={(e) => {
-            console.error('Formrun Script failed to load', e)
-          }}
         />
         <div
           className="formrun-embed container-fluid"

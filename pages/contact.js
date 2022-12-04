@@ -50,8 +50,7 @@ export default function Contact() {
           className="formrun-embed container-fluid"
           data-formrun-form="@mmfx--1629756410"
           data-formrun-redirect="true"
-        >
-        </div>
+        /> 
     </main>
 
     <footer className={styles.footer}>

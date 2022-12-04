@@ -5,6 +5,15 @@ import Script from 'next/script'
 import styles from '../styles/Some.module.css'
 
 export default function Contact() {
+    useEffect(() => {
+    const head = document.getElementsByTagName("head")[0] as HTMLElement;
+    const scriptUrl = document.createElement("script");
+    scriptUrl.src = "https://sdk.form.run/js/v2/embed.js";
+    head.appendChild(scriptUrl);
+    return () => {
+      head.removeChild(scriptUrl);
+    };
+  }, []);
   return (
     <div className={styles.container}>
     <Head>
@@ -37,18 +46,12 @@ export default function Contact() {
     </div>
 
     <main className={styles.main}>
-      <>
-        <Script
-          src="https://sdk.form.run/js/v2/embed.js"
-          strategy="lazyOnload"
-        />
         <div
           className="formrun-embed container-fluid"
           data-formrun-form="@mmfx--1629756410"
           data-formrun-redirect="true"
         >
         </div>
-      </>
     </main>
 
     <footer className={styles.footer}>
